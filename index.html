@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countries Quiz App</title>
+    <link rel='stylesheet' href='./quizstyle.css'>
+    <script src="https://kit.fontawesome.com/d00baaaeb3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container" id="start-container">
+        <h1>Countries Quiz App</h1>
+        <p>Choose the continent of each country</p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter Your Name">
+    </br>
+        <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+    <div class="container" id="quiz-container">
+        <h2 id="question"></h2>
+        <div id="choices" class="choices-container"></div>
+        <div id="sign">
+            <span id="correct"><i class="fa-solid fa-check fa-xxl" style="color: #05cc26;"></i></span>
+            <span id="wrong"><i class="fa-solid fa-xmark  fa-xxl" style="color: #e00606;"></i></span>
+        </div>
+    </div>
+
+    <div class="container" id="result-container">
+        <h2>Quiz Completed!</h2>
+        <p id="user-name"></p>
+        <p id="user-score"></p>
+        <button onclick="showHistory()">Go to Dashboard</button>
+    </div>
+    
+    <div class="container" id="history-container">
+        <h2>Players Dashboard</h2>
+        <ol id="history-list"></ol>
+        <button class="clearbtn" onclick="clearHistory()">Clear History</button>
+        <button class="againbtn" onclick="startNewQuiz()">Play Again</button>
+    </div>
+    <script src='./quizfunctions.js'></script>
+</body>
+</html>
